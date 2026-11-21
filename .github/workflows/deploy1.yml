@@ -50,9 +50,9 @@ jobs:
           # Clona o repositório na primeira execução; nas seguintes, só atualiza
           cd ~/nodepipeline-devops 2>/dev/null || { git clone https://github.com/${{ github.repository }}.git ~/nodepipeline-devops && cd ~/nodepipeline-devops; }
           git pull origin main  # Ou outro comando para atualizar o código
-          sudo npm install
-          sudo pm2 delete server 2>/dev/null
-          sudo pm2 start server.js  # Exemplo para reiniciar a aplicação Node.js com PM2
+          npm install
+          pm2 delete server 2>/dev/null
+          pm2 start server.js  # Exemplo para reiniciar a aplicação Node.js com PM2
 
 
  
