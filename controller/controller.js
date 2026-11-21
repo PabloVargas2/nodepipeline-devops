@@ -23,4 +23,8 @@ router.get('/teste3', (req, res) => {
     res.status(200).json({ success: true, data: 'isso é um teste 3!' });
 });
 
+router.get('/teste4', (req, res) => {
+    res.status(200).json({ success: true, data: 'isso é um teste 4!' });
+});
+
 module.exports = router;
